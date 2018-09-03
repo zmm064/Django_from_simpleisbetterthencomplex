@@ -1,0 +1,29 @@
+﻿{% load widget_tweaks %}
+
+{% for field in form %}
+      <div class="form-group">
+        {{ field.label_tag }}
+
+        {% if form.is_bound %}
+            {% if field.errors %}
+                {# 字段提交内容有误 #}
+                {% render_field field class="form-control is-invalid" %}
+                {% for error in field.errors %}
+                  <div class="invalid-feedback"> {{ error }} </div>
+                {% endfor %}
+            {% else %}
+                {# 字段提交内容正常 #}
+                {% render_field field class="form-control is-valid" %}
+            {% endif %}
+        {% else %}
+            {# 空表单 #}
+            {% render_field field class="form-control" %} {#{{ field }}#}
+        {% endif %}
+
+
+
+        {% if field.help_text %}
+          <small class="form-text text-muted"> {{ field.help_text }} </small>
+        {% endif %}
+      </div>
+    {% endfor %}

@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles', # 处理静态文件
 
+    'widget_tweaks',
+
     'boards',
 ]
 

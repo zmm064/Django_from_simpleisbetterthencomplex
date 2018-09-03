@@ -18,7 +18,7 @@ class Topic(models.Model):
 
 
 class Post(models.Model):
-    message    = models.TextField(max_length=4000)
+    message    = models.TextField()
     topic      = models.ForeignKey(Topic, related_name='posts', verbose_name='主题')
     created_at = models.DateTimeField('创建时间', auto_now_add=True)
     updated_at = models.DateTimeField('最近更新时间', null=True)

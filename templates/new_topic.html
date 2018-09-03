@@ -1,0 +1,17 @@
+﻿{% extends 'base.html' %}
+
+
+{% block title %}新建话题{% endblock %}
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'boards:home' %}">首页</a></li>
+  <li class="breadcrumb-item"><a href="{% url 'boards:topics' board.pk %}">{{ board.name }}</a></li>
+  <li class="breadcrumb-item active">新建话题</li>
+{% endblock %}
+
+{% block content %}
+<form method="post" novalidate>
+    {% csrf_token %}
+    {% include 'includes/form.html' %}
+    <button type="submit" class="btn btn-success">发布</button>
+    </form>
+{% endblock %}

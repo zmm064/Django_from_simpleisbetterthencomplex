@@ -32,6 +32,9 @@
   <ItemGroup>
     <Compile Include="boards\admin.py" />
     <Compile Include="boards\apps.py" />
+    <Compile Include="boards\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="boards\migrations\__init__.py" />
     <Compile Include="boards\models.py" />
     <Compile Include="boards\tests.py" />
@@ -47,7 +50,8 @@
     <Compile Include="Django论坛\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="boards\templates\index.html" />
+    <Content Include="static\css\app.css" />
+    <Content Include="templates\base.html" />
     <Content Include="requirements.txt" />
     <Content Include="static\css\bootstrap-grid.css" />
     <Content Include="static\css\bootstrap-grid.css.map" />
@@ -62,6 +66,9 @@
     <Content Include="static\css\bootstrap.min.css" />
     <Content Include="static\css\bootstrap.min.css.map" />
     <Content Include="templates\home.html" />
+    <Content Include="templates\includes\form.html" />
+    <Content Include="templates\new_topic.html" />
+    <Content Include="templates\topics.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="boards\" />
@@ -71,6 +78,7 @@
     <Folder Include="static\" />
     <Folder Include="static\css\" />
     <Folder Include="templates\" />
+    <Folder Include="templates\includes\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="venv\">
