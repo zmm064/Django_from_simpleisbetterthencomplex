@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
 
     'boards',
+    'accounts',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -120,7 +121,9 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+#LOGIN_URL = 'login'
+LOGOUT_REDIRECT_URL = 'boards:home'
+LOGIN_REDIRECT_URL = 'boards:home'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
@@ -130,3 +133,4 @@ STATICFILES_DIRS = [
    os.path.join(BASE_DIR, 'static'),
 ]
 #STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

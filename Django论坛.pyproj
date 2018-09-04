@@ -30,6 +30,24 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="accounts\admin.py" />
+    <Compile Include="accounts\apps.py" />
+    <Compile Include="accounts\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="accounts\migrations\__init__.py" />
+    <Compile Include="accounts\models.py" />
+    <Compile Include="accounts\tests\test_form_signup.py" />
+    <Compile Include="accounts\tests\test_view_password_change.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="accounts\tests\test_view_signup.py" />
+    <Compile Include="accounts\tests\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="accounts\urls.py" />
+    <Compile Include="accounts\views.py" />
+    <Compile Include="accounts\__init__.py" />
     <Compile Include="boards\admin.py" />
     <Compile Include="boards\apps.py" />
     <Compile Include="boards\forms.py">
@@ -37,7 +55,25 @@
     </Compile>
     <Compile Include="boards\migrations\__init__.py" />
     <Compile Include="boards\models.py" />
-    <Compile Include="boards\tests.py" />
+    <Compile Include="boards\templatetags\form_tags.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="boards\templatetags\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="accounts\tests\test_mail_password_reset.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="boards\tests\test_templatetags.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="boards\tests\test_views.py" />
+    <Compile Include="accounts\tests\test_view_password_reset.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="boards\tests\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="boards\urls.py">
       <SubType>Code</SubType>
     </Compile>
@@ -50,7 +86,22 @@
     <Compile Include="Django论坛\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="accounts\templates\index.html" />
+    <Content Include="static\css\accounts.css" />
     <Content Include="static\css\app.css" />
+    <Content Include="static\img\leaves.png" />
+    <Content Include="static\js\bootstrap.bundle.js" />
+    <Content Include="static\js\bootstrap.bundle.js.map" />
+    <Content Include="static\js\bootstrap.bundle.min.js" />
+    <Content Include="static\js\bootstrap.bundle.min.js.map" />
+    <Content Include="static\js\bootstrap.js" />
+    <Content Include="static\js\bootstrap.js.map" />
+    <Content Include="static\js\bootstrap.min.js" />
+    <Content Include="static\js\bootstrap.min.js.map" />
+    <Content Include="static\js\jquery-3.2.1.min.js" />
+    <Content Include="static\js\popper.min.js" />
+    <Content Include="static\js\simplemde.min.js" />
+    <Content Include="templates\base_accounts.html" />
     <Content Include="templates\base.html" />
     <Content Include="requirements.txt" />
     <Content Include="static\css\bootstrap-grid.css" />
@@ -68,15 +119,33 @@
     <Content Include="templates\home.html" />
     <Content Include="templates\includes\form.html" />
     <Content Include="templates\new_topic.html" />
+    <Content Include="templates\login.html" />
+    <Content Include="templates\password_change.html" />
+    <Content Include="templates\password_change_done.html" />
+    <Content Include="templates\password_reset.html" />
+    <Content Include="templates\password_reset_complete.html" />
+    <Content Include="templates\password_reset_confirm.html" />
+    <Content Include="templates\password_reset_done.html" />
+    <Content Include="templates\password_reset_email.html" />
+    <Content Include="templates\password_reset_subject.txt" />
+    <Content Include="templates\signup.html" />
     <Content Include="templates\topics.html" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="accounts\" />
+    <Folder Include="accounts\migrations\" />
+    <Folder Include="accounts\templates\" />
+    <Folder Include="accounts\tests\" />
     <Folder Include="boards\" />
     <Folder Include="boards\migrations\" />
     <Folder Include="boards\templates\" />
+    <Folder Include="boards\templatetags\" />
+    <Folder Include="boards\tests\" />
     <Folder Include="Django论坛\" />
     <Folder Include="static\" />
     <Folder Include="static\css\" />
+    <Folder Include="static\img\" />
+    <Folder Include="static\js\" />
     <Folder Include="templates\" />
     <Folder Include="templates\includes\" />
   </ItemGroup>
