@@ -121,7 +121,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-#LOGIN_URL = 'login'
+LOGIN_URL = 'login' # 声明跳转到登陆页的地址
 LOGOUT_REDIRECT_URL = 'boards:home'
 LOGIN_REDIRECT_URL = 'boards:home'
 # Static files (CSS, JavaScript, Images)

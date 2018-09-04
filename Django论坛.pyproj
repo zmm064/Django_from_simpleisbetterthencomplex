@@ -67,8 +67,22 @@
     <Compile Include="boards\tests\test_templatetags.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="boards\tests\test_views.py" />
     <Compile Include="accounts\tests\test_view_password_reset.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="boards\tests\test_view_board_topics.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="boards\tests\test_view_home.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="boards\tests\test_view_new_topic.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="boards\tests\test_view_reply_topic.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="boards\tests\test_view_topic_posts.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="boards\tests\__init__.py">
@@ -89,6 +103,7 @@
     <Content Include="accounts\templates\index.html" />
     <Content Include="static\css\accounts.css" />
     <Content Include="static\css\app.css" />
+    <Content Include="static\img\avatar.svg" />
     <Content Include="static\img\leaves.png" />
     <Content Include="static\js\bootstrap.bundle.js" />
     <Content Include="static\js\bootstrap.bundle.js.map" />
@@ -128,8 +143,10 @@
     <Content Include="templates\password_reset_done.html" />
     <Content Include="templates\password_reset_email.html" />
     <Content Include="templates\password_reset_subject.txt" />
+    <Content Include="templates\reply_topic.html" />
     <Content Include="templates\signup.html" />
     <Content Include="templates\topics.html" />
+    <Content Include="templates\topic_posts.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="accounts\" />
