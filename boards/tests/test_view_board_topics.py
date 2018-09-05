@@ -1,4 +1,5 @@
 import django
+from boards.views import TopicListView
 from django.urls import resolve
 from django.core.urlresolvers import reverse
 from django.test import TestCase
@@ -34,7 +35,8 @@ class BoardTopicsTests(TestCase):
 
     def test_board_topics_url_resolves_board_topics_view(self):
         view = resolve(self.board_topics_url)
-        self.assertEquals(view.func, board_topics) # 测试话题列表页调用正确的视图函数
+        #self.assertEquals(view.func, board_topics) # 测试话题列表页调用正确的视图函数
+        self.assertEquals(view.func.view_class, TopicListView)
 
     def test_board_topics_view_contains_link_back_to_homepage(self):
         # 测试版块页包含指向首页的链接

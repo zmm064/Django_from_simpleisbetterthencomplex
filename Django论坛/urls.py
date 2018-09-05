@@ -41,4 +41,5 @@ urlpatterns = [
         name='password_change_done'),
 
     url(r'^', include('boards.urls', namespace='boards')),
+    url(r'^settings/', include('accounts.urls')),
 ]

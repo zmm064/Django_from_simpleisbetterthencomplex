@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles', # 处理静态文件
+    'django.contrib.humanize',
 
     'widget_tweaks',
 

@@ -73,6 +73,9 @@
     <Compile Include="boards\tests\test_view_board_topics.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="boards\tests\test_view_edit_post.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="boards\tests\test_view_home.py">
       <SubType>Code</SubType>
     </Compile>
@@ -103,6 +106,7 @@
     <Content Include="accounts\templates\index.html" />
     <Content Include="static\css\accounts.css" />
     <Content Include="static\css\app.css" />
+    <Content Include="static\css\simplemde.min.css" />
     <Content Include="static\img\avatar.svg" />
     <Content Include="static\img\leaves.png" />
     <Content Include="static\js\bootstrap.bundle.js" />
@@ -131,8 +135,11 @@
     <Content Include="static\css\bootstrap.css.map" />
     <Content Include="static\css\bootstrap.min.css" />
     <Content Include="static\css\bootstrap.min.css.map" />
+    <Content Include="templates\edit_post.html" />
     <Content Include="templates\home.html" />
     <Content Include="templates\includes\form.html" />
+    <Content Include="templates\includes\pagination.html" />
+    <Content Include="templates\my_account.html" />
     <Content Include="templates\new_topic.html" />
     <Content Include="templates\login.html" />
     <Content Include="templates\password_change.html" />
