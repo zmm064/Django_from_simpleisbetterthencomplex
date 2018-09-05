@@ -103,6 +103,7 @@
     <Compile Include="Django论坛\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".env" />
     <Content Include="accounts\templates\index.html" />
     <Content Include="static\css\accounts.css" />
     <Content Include="static\css\app.css" />
